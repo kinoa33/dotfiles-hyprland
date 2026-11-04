@@ -72,7 +72,7 @@ ShellRoot {
             WlrLayershell.namespace: "clipboard"
             WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
 
-            // قائمة عناصر cliphist: [{id, line, text}]
+            
             property var all: []
 
             Process {
@@ -97,7 +97,6 @@ ShellRoot {
                 }
             }
 
-            // ----- الصندوق + التوهج الخارجي -----
             Rectangle {
                 id: boxSrc
                 anchors.fill: parent
@@ -123,7 +122,7 @@ ShellRoot {
                 anchors.fill: boxSrc
                 anchors.margins: 14
 
-                // ----- البحث -----
+               
                 Rectangle {
                     id: searchBox
                     width: parent.width
@@ -176,7 +175,7 @@ ShellRoot {
                             const e = list.model.values[list.currentIndex];
                             if (e) root.pick(e.id);
                         }
-                        // Delete: حذف العنصر المحدد من السجل
+                        
                         Keys.onDeletePressed: {
                             const e = list.model.values[list.currentIndex];
                             if (!e) return;
@@ -186,7 +185,7 @@ ShellRoot {
                     }
                 }
 
-                // ----- القائمة -----
+                
                 ListView {
                     id: list
                     anchors.top: searchBox.bottom
