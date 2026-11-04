@@ -8,13 +8,13 @@ ShellRoot {
     id: root
     property bool open: false
 
-    // ---------- إعدادات سريعة ----------
-    property bool glow: true     // غيّرها إلى false لو حسّيت ثقل (يوقف كل التوهج)
-    property bool rtl: false      // واجهة من اليمين لليسار
-    // خط واحد عربي؛ Qt يرجع تلقائياً لخط بديل للحروف الناقصة
+    
+    property bool glow: true     
+    property bool rtl: false      
+    
     property string fontFamily: "Pixel Code"
 
-    // ---------- ألوان pywal ----------
+    // ----------  pywal ----------
     FileView {
         path: Quickshell.env("HOME") + "/.cache/wal/colors.json"
         watchChanges: true
@@ -85,7 +85,7 @@ ShellRoot {
         function close(): void { root.open = false }
     }
 
-    // نص بتوهج نيون
+    
     component GlowText: Text {
         id: gt
         property color glowColor: root.c5
@@ -118,7 +118,7 @@ ShellRoot {
             WlrLayershell.namespace: "todo"
             WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
 
-            // ----- الصندوق + التوهج الخارجي -----
+           
             Rectangle {
                 id: boxSrc
                 anchors.fill: parent
@@ -147,7 +147,7 @@ ShellRoot {
                 LayoutMirroring.enabled: root.rtl
                 LayoutMirroring.childrenInherit: true
 
-                // ----- العنوان + العداد -----
+                /
                 Item {
                     id: header
                     width: parent.width
@@ -172,7 +172,7 @@ ShellRoot {
                     }
                 }
 
-                // ----- شريط التقدم -----
+                
                 Rectangle {
                     id: prog
                     anchors.top: header.bottom
@@ -192,7 +192,7 @@ ShellRoot {
                     }
                 }
 
-                // ----- حقل الإضافة -----
+                
                 Rectangle {
                     id: inputBox
                     anchors.top: prog.bottom
@@ -256,7 +256,7 @@ ShellRoot {
                     }
                 }
 
-                // ----- التبويبات + مسح المنجز -----
+                
                 Item {
                     id: tabRow
                     anchors.top: inputBox.bottom
@@ -336,7 +336,7 @@ ShellRoot {
                     }
                 }
 
-                // ----- القائمة -----
+                
                 ListView {
                     id: list
                     anchors.top: tabRow.bottom
@@ -385,7 +385,7 @@ ShellRoot {
                                           : (hover.containsMouse ? Qt.alpha(root.c5, 0.55) : Qt.alpha(root.c3, 0.25))
                         }
 
-                        // الضغط على الصف = تبديل الحالة
+                        
                         MouseArea {
                             id: hover
                             anchors.fill: parent
@@ -394,7 +394,7 @@ ShellRoot {
                             onClicked: root.toggle(row.modelData.id)
                         }
 
-                        // مربع الإنجاز
+                        
                         Rectangle {
                             id: cb
                             anchors.left: parent.left
