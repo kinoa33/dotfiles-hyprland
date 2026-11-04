@@ -1,0 +1,141 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 27,
+    "margin-top": 10,
+    "margin-left": 90,
+    "margin-right": 90,
+    "spacing": 5,
+    "reload_style_on_change": true,
+
+    "modules-left": [
+        "custom/arch",
+        "custom/sep-l",
+        "clock",
+        "custom/sep-l",
+        "hyprland/language"
+    ],
+
+    "modules-center": [
+        "custom/sep-l",
+        "hyprland/workspaces",
+        "custom/sep-l"
+    ],
+
+    "modules-right": [
+        "custom/brightness",
+        "custom/sep-r1",
+        "pulseaudio",
+        "custom/dnd",
+        "custom/sep-r2",
+        "tray",
+         "custom/sep-r2",
+        "custom/battery"
+    ],
+
+    "custom/arch": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/sep-l": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "custom/sep-r1": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "custom/sep-r2": {
+        "format": "|",
+        "tooltip": false
+    },
+    
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "all-outputs": true,
+
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        },
+
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true
+    },
+
+    "hyprland/language": {
+        "format": "󰌌 {}",
+        "format-en": "EN",
+        "format-ar": "AR"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟  مكتوم",
+        "format-icons": {
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+
+    "clock": {
+        "format": " {:%I:%M %p}",
+        "format-alt": " {:%A %d %B %Y}",
+        "tooltip-format": "<big>{:%A %d %B %Y}</big>",
+        "on-click": "shift_format"
+    },
+
+    "custom/dnd": {
+        "exec": "if [ \"$(dunstctl is-paused)\" = \"true\" ]; then echo '󰂛'; else echo '󰂚'; fi",
+        "interval": 2,
+        "format": "{}",
+        "exec-if": "which dunstctl",
+        "on-click": "dunstctl set-paused toggle"
+    },
+
+    "tray": {
+        "icon-size": 17,
+        "spacing": 17
+    },
+
+    "custom/battery": {
+        "exec": "echo '{\"text\":\"100%\",\"class\":\"charging\"}'",
+        "return-type": "json",
+        "interval": "once",
+        "format": "󰂄 {}"
+    }
+}

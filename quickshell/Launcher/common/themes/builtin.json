@@ -1,0 +1,1819 @@
+{
+  "format": "quickshell-theme-set",
+  "version": 1,
+  "about": "the built-in looks. edit a copy in the theme studio (Super+Shift+T) - a user theme with the same id overrides one of these. format: common/themes/README.md",
+  "themes": [
+    {
+      "id": "rice",
+      "label": "rice neon",
+      "glyph": "󰸉",
+      "cat": "glass",
+      "blurb": "your bar's neon glass, wearing the wallpaper",
+      "style": {
+        "radius": 16,
+        "radiusSm": 10,
+        "surface": "ricepill",
+        "fx": "banner",
+        "emblem": "glow",
+        "glow": true,
+        "halo": true
+      },
+      "colors": {
+        "accent": "color5",
+        "accent2": "color4",
+        "text": "fg",
+        "selText": {
+          "from": "@accent",
+          "lighter": 1.35
+        },
+        "panelTop": {
+          "from": "bg",
+          "alpha": 0.66
+        },
+        "panelMid": {
+          "from": "bg",
+          "alpha": 0.68
+        },
+        "panelBottom": {
+          "from": "bg",
+          "alpha": 0.72
+        },
+        "panelBorder": {
+          "from": "@accent",
+          "alpha": 0.28
+        },
+        "rim": "transparent",
+        "well": {
+          "from": "bg",
+          "alpha": 0.45
+        },
+        "wellBorder": "transparent",
+        "field": {
+          "from": "bg",
+          "alpha": 0.45
+        },
+        "fieldBorder": {
+          "from": "@accent",
+          "alpha": 0.25
+        },
+        "fieldFocus": {
+          "from": "@accent",
+          "alpha": 0.6
+        }
+      }
+    },
+    {
+      "id": "neon",
+      "label": "neon glass",
+      "glyph": "󱐋",
+      "cat": "glass",
+      "blurb": "dark glass · hairlines · a quiet glow",
+      "style": {
+        "radius": 16,
+        "radiusSm": 10,
+        "surface": "flat",
+        "fx": "none",
+        "emblem": "glow",
+        "glow": true,
+        "hairline": true
+      },
+      "colors": {
+        "accent": "color5",
+        "accent2": "color4",
+        "text": "fg",
+        "selText": "fg",
+        "panelTop": {
+          "from": "bg",
+          "alpha": 0.84
+        },
+        "panelMid": {
+          "from": "bg",
+          "alpha": 0.84
+        },
+        "panelBottom": {
+          "from": "bg",
+          "alpha": 0.86
+        },
+        "panelBorder": {
+          "from": "@accent",
+          "alpha": 0.38
+        },
+        "rim": "transparent",
+        "well": "transparent",
+        "wellBorder": "transparent",
+        "field": {
+          "from": "fg",
+          "alpha": 0.06
+        },
+        "fieldBorder": {
+          "from": "@accent",
+          "alpha": 0.24
+        },
+        "fieldFocus": {
+          "from": "@accent",
+          "alpha": 0.6
+        }
+      }
+    },
+    {
+      "id": "aero",
+      "label": "frutiger aero",
+      "glyph": "󰖌",
+      "cat": "glass",
+      "blurb": "glossy aqua glass · orbs · bubbles",
+      "style": {
+        "radius": 18,
+        "radiusSm": 11,
+        "pillFull": true,
+        "surface": "gloss",
+        "fx": "bubbles",
+        "emblem": "orb",
+        "sheen": true,
+        "streak": true,
+        "swoosh": true,
+        "raisedText": true,
+        "shadow": 0.6,
+        "wellInset": true,
+        "fieldInset": true
+      },
+      "colors": {
+        "aqua": {
+          "from": "color5",
+          "lean": [
+            0.52,
+            0.88,
+            1.75,
+            0.06
+          ]
+        },
+        "leaf": {
+          "from": "color2",
+          "lean": [
+            0.33,
+            0.85,
+            1.4,
+            0.1
+          ]
+        },
+        "accent": "@aqua",
+        "accent2": "@leaf",
+        "text": "fg",
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "bg",
+          "mix": [
+            [
+              "@aqua",
+              0.5
+            ]
+          ],
+          "alpha": 0.68
+        },
+        "panelMid": {
+          "from": "bg",
+          "mix": [
+            [
+              "@aqua",
+              0.14
+            ]
+          ],
+          "alpha": 0.7
+        },
+        "panelBottom": {
+          "from": "bg",
+          "mix": [
+            [
+              "@leaf",
+              0.16
+            ]
+          ],
+          "alpha": 0.8
+        },
+        "panelBorder": {
+          "from": "@aqua",
+          "lighter": 1.2,
+          "alpha": 0.7
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.18
+        },
+        "well": {
+          "from": "bg",
+          "alpha": 0.44
+        },
+        "wellBorder": {
+          "from": "#ffffff",
+          "alpha": 0.09
+        },
+        "field": {
+          "from": "bg",
+          "alpha": 0.62
+        },
+        "fieldBorder": {
+          "from": "@aqua",
+          "lighter": 1.2,
+          "alpha": 0.4
+        },
+        "fieldFocus": {
+          "from": "@aqua",
+          "lighter": 1.2,
+          "alpha": 0.9
+        }
+      }
+    },
+    {
+      "id": "darkaero",
+      "label": "dark aero",
+      "glyph": "󰖳",
+      "cat": "glass",
+      "blurb": "smoked vista glass · a light sweep",
+      "style": {
+        "radius": 12,
+        "radiusSm": 6,
+        "surface": "gloss",
+        "fx": "sweep",
+        "emblem": "orb",
+        "sheen": true,
+        "streak": true,
+        "raisedText": true,
+        "shadow": 0.6,
+        "wellInset": true,
+        "fieldInset": true
+      },
+      "colors": {
+        "blue": {
+          "from": "color5",
+          "lean": [
+            0.57,
+            0.92,
+            1.6,
+            0.12
+          ]
+        },
+        "smoke": {
+          "from": "bg",
+          "darker": 1.6,
+          "mix": [
+            [
+              "#000000",
+              0.5
+            ]
+          ]
+        },
+        "accent": "@blue",
+        "accent2": {
+          "from": "color2",
+          "lean": [
+            0.5,
+            0.9,
+            1.4,
+            0.1
+          ]
+        },
+        "text": {
+          "from": "fg",
+          "mix": [
+            [
+              "#ffffff",
+              0.5
+            ]
+          ]
+        },
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "@smoke",
+          "mix": [
+            [
+              "@blue",
+              0.2
+            ]
+          ],
+          "alpha": 0.64
+        },
+        "panelMid": {
+          "from": "@smoke",
+          "alpha": 0.68
+        },
+        "panelBottom": {
+          "from": "@smoke",
+          "mix": [
+            [
+              "@blue",
+              0.12
+            ]
+          ],
+          "alpha": 0.76
+        },
+        "panelBorder": {
+          "from": "#ffffff",
+          "alpha": 0.3
+        },
+        "rim": {
+          "from": "@blue",
+          "alpha": 0.35
+        },
+        "well": {
+          "from": "#000000",
+          "alpha": 0.34
+        },
+        "wellBorder": {
+          "from": "#ffffff",
+          "alpha": 0.07
+        },
+        "field": {
+          "from": "#000000",
+          "alpha": 0.36
+        },
+        "fieldBorder": {
+          "from": "#ffffff",
+          "alpha": 0.22
+        },
+        "fieldFocus": {
+          "from": "@blue",
+          "alpha": 0.85
+        }
+      }
+    },
+    {
+      "id": "eco",
+      "label": "frutiger eco",
+      "glyph": "󰌪",
+      "cat": "glass",
+      "blurb": "sky to meadow · sunbeams · leaves",
+      "style": {
+        "dark": false,
+        "radius": 20,
+        "radiusSm": 12,
+        "pillFull": true,
+        "surface": "gloss",
+        "fx": "eco",
+        "emblem": "orb",
+        "sheen": true,
+        "streak": true,
+        "raisedText": true,
+        "shadow": 0.3
+      },
+      "colors": {
+        "leafc": {
+          "from": "color2",
+          "lean": [
+            0.31,
+            0.92,
+            1.7,
+            0.02
+          ]
+        },
+        "sky": {
+          "from": "color5",
+          "lean": [
+            0.56,
+            0.92,
+            1.5,
+            0.22
+          ]
+        },
+        "accent": "@leafc",
+        "accent2": "@sky",
+        "text": {
+          "from": "#0d2b14",
+          "mix": [
+            [
+              "bg",
+              0.15
+            ]
+          ]
+        },
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "@sky",
+          "mix": [
+            [
+              "#ffffff",
+              0.4
+            ]
+          ],
+          "alpha": 0.88
+        },
+        "panelMid": {
+          "from": "@sky",
+          "mix": [
+            [
+              "#ffffff",
+              0.75
+            ]
+          ],
+          "alpha": 0.86
+        },
+        "panelBottom": {
+          "from": "@leafc",
+          "mix": [
+            [
+              "#ffffff",
+              0.55
+            ]
+          ],
+          "alpha": 0.88
+        },
+        "panelBorder": {
+          "from": "#ffffff",
+          "alpha": 0.9
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.6
+        },
+        "well": {
+          "from": "#ffffff",
+          "alpha": 0.42
+        },
+        "wellBorder": {
+          "from": "@leafc",
+          "alpha": 0.18
+        },
+        "field": {
+          "from": "#ffffff",
+          "alpha": 0.78
+        },
+        "fieldBorder": {
+          "from": "@leafc",
+          "alpha": 0.35
+        },
+        "fieldFocus": {
+          "from": "@leafc",
+          "alpha": 0.85
+        }
+      }
+    },
+    {
+      "id": "liquid",
+      "label": "liquid glass",
+      "glyph": "󰂵",
+      "cat": "glass",
+      "blurb": "clear lens glass · bright specular edges",
+      "style": {
+        "radius": 26,
+        "radiusSm": 16,
+        "pillFull": true,
+        "surface": "lens",
+        "fx": "none",
+        "emblem": "lens",
+        "sheen": true,
+        "edge": true,
+        "shadow": 0.45
+      },
+      "colors": {
+        "accent": {
+          "from": "color5",
+          "vivid": [
+            1.3,
+            0.16
+          ]
+        },
+        "accent2": {
+          "from": "color4",
+          "vivid": [
+            1.2,
+            0.16
+          ]
+        },
+        "text": {
+          "from": "fg",
+          "mix": [
+            [
+              "#ffffff",
+              0.7
+            ]
+          ]
+        },
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "bg",
+          "darker": 1.2,
+          "mix": [
+            [
+              "#ffffff",
+              0.1
+            ]
+          ],
+          "alpha": 0.66
+        },
+        "panelMid": {
+          "from": "bg",
+          "darker": 1.3,
+          "mix": [
+            [
+              "#ffffff",
+              0.03
+            ]
+          ],
+          "alpha": 0.64
+        },
+        "panelBottom": {
+          "from": "bg",
+          "darker": 1.3,
+          "mix": [
+            [
+              "@accent",
+              0.1
+            ]
+          ],
+          "alpha": 0.68
+        },
+        "panelBorder": {
+          "from": "#ffffff",
+          "alpha": 0.55
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.22
+        },
+        "well": {
+          "from": "#ffffff",
+          "alpha": 0.05
+        },
+        "wellBorder": {
+          "from": "#ffffff",
+          "alpha": 0.14
+        },
+        "field": {
+          "from": "#ffffff",
+          "alpha": 0.09
+        },
+        "fieldBorder": {
+          "from": "#ffffff",
+          "alpha": 0.3
+        },
+        "fieldFocus": {
+          "from": "#ffffff",
+          "alpha": 0.75
+        }
+      }
+    },
+    {
+      "id": "frost",
+      "label": "daylight frost",
+      "glyph": "󰖨",
+      "cat": "glass",
+      "blurb": "light frosted glass · soft colour",
+      "style": {
+        "dark": false,
+        "radius": 22,
+        "radiusSm": 12,
+        "pillFull": true,
+        "surface": "soft",
+        "fx": "blobs",
+        "emblem": "soft",
+        "sheen": true,
+        "shadow": 0.32
+      },
+      "colors": {
+        "deep": {
+          "from": "color5",
+          "vivid": [
+            1.6,
+            -0.16
+          ]
+        },
+        "accent": "@deep",
+        "accent2": {
+          "from": "color4",
+          "vivid": [
+            1.4,
+            -0.02
+          ]
+        },
+        "text": "bg",
+        "selText": "bg",
+        "panelTop": {
+          "from": "fg",
+          "mix": [
+            [
+              "#ffffff",
+              0.72
+            ]
+          ],
+          "alpha": 0.82
+        },
+        "panelMid": {
+          "from": "fg",
+          "mix": [
+            [
+              "#ffffff",
+              0.55
+            ]
+          ],
+          "alpha": 0.78
+        },
+        "panelBottom": {
+          "from": "fg",
+          "mix": [
+            [
+              "#ffffff",
+              0.4
+            ]
+          ],
+          "alpha": 0.76
+        },
+        "panelBorder": {
+          "from": "#ffffff",
+          "alpha": 0.8
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.5
+        },
+        "well": {
+          "from": "#ffffff",
+          "alpha": 0.34
+        },
+        "wellBorder": {
+          "from": "bg",
+          "alpha": 0.08
+        },
+        "field": {
+          "from": "#ffffff",
+          "alpha": 0.62
+        },
+        "fieldBorder": {
+          "from": "@deep",
+          "alpha": 0.3
+        },
+        "fieldFocus": {
+          "from": "@deep",
+          "alpha": 0.75
+        }
+      }
+    },
+    {
+      "id": "chrome",
+      "label": "y2k chrome",
+      "glyph": "󱕅",
+      "cat": "glass",
+      "blurb": "brushed metal · iridescent shine",
+      "style": {
+        "dark": false,
+        "radius": 18,
+        "radiusSm": 10,
+        "pillFull": true,
+        "surface": "chrome",
+        "fx": "sweep",
+        "emblem": "orb",
+        "sheen": true,
+        "shadow": 0.35
+      },
+      "colors": {
+        "irid": {
+          "from": "color5",
+          "lean": [
+            0.64,
+            0.88,
+            1.5,
+            0.1
+          ]
+        },
+        "accent": "@irid",
+        "accent2": {
+          "from": "color4",
+          "lean": [
+            0.86,
+            0.88,
+            1.4,
+            0.15
+          ]
+        },
+        "text": "#1a2030",
+        "selText": "#0d111a",
+        "panelTop": {
+          "from": "#f6f8fb",
+          "alpha": 0.95
+        },
+        "panelMid": {
+          "from": "#cdd2da",
+          "alpha": 0.94
+        },
+        "panelBottom": {
+          "from": "#98a0ad",
+          "alpha": 0.95
+        },
+        "panelBorder": "#5f6773",
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.85
+        },
+        "well": {
+          "from": "#ffffff",
+          "alpha": 0.38
+        },
+        "wellBorder": {
+          "from": "#5f6773",
+          "alpha": 0.4
+        },
+        "field": {
+          "from": "#ffffff",
+          "alpha": 0.82
+        },
+        "fieldBorder": "#7b8494",
+        "fieldFocus": "@irid"
+      }
+    },
+    {
+      "id": "terminal",
+      "label": "phosphor",
+      "glyph": "󰞷",
+      "cat": "retro",
+      "blurb": "crt terminal · sharp · scanlines",
+      "style": {
+        "radius": 4,
+        "radiusSm": 2,
+        "surface": "block",
+        "fx": "scanlines",
+        "emblem": "prompt",
+        "glow": true,
+        "shadow": 0.5
+      },
+      "colors": {
+        "ph": {
+          "from": "ok",
+          "mix": [
+            [
+              "color5",
+              0.18
+            ]
+          ]
+        },
+        "tube": {
+          "from": "bg",
+          "tone": {
+            "lightMax": 0.16
+          },
+          "darker": 1.6
+        },
+        "accent": "@ph",
+        "accent2": "warn",
+        "text": {
+          "from": "fg",
+          "mix": [
+            [
+              "@ph",
+              0.5
+            ]
+          ]
+        },
+        "selText": "@tube",
+        "panelTop": {
+          "from": "@tube",
+          "alpha": 0.95
+        },
+        "panelMid": {
+          "from": "@tube",
+          "alpha": 0.95
+        },
+        "panelBottom": {
+          "from": "@tube",
+          "darker": 1.2,
+          "alpha": 0.96
+        },
+        "panelBorder": {
+          "from": "@ph",
+          "alpha": 0.6
+        },
+        "rim": {
+          "from": "@ph",
+          "alpha": 0.12
+        },
+        "well": {
+          "from": "#000000",
+          "alpha": 0.28
+        },
+        "wellBorder": {
+          "from": "@ph",
+          "alpha": 0.2
+        },
+        "field": {
+          "from": "@ph",
+          "alpha": 0.05
+        },
+        "fieldBorder": {
+          "from": "@ph",
+          "alpha": 0.35
+        },
+        "fieldFocus": {
+          "from": "@ph",
+          "alpha": 0.85
+        }
+      }
+    },
+    {
+      "id": "classic",
+      "label": "classic",
+      "glyph": "󰍹",
+      "cat": "retro",
+      "blurb": "bevelled 98-era chrome · title bar",
+      "style": {
+        "dark": false,
+        "radius": 0,
+        "radiusSm": 0,
+        "surface": "classic",
+        "fx": "titlebar",
+        "emblem": "classic",
+        "bevel": true,
+        "shadow": 0.4
+      },
+      "colors": {
+        "face": {
+          "from": "fg",
+          "mix": [
+            [
+              "#c4c4c4",
+              0.55
+            ],
+            [
+              "bg",
+              0.06
+            ]
+          ]
+        },
+        "navy": {
+          "from": "color5",
+          "lean": [
+            0.64,
+            0.95,
+            1.5,
+            -0.22
+          ]
+        },
+        "accent": "@navy",
+        "accent2": {
+          "from": "color5",
+          "lean": [
+            0.58,
+            0.95,
+            1.4,
+            0.04
+          ]
+        },
+        "text": {
+          "from": "bg",
+          "mix": [
+            [
+              "#000000",
+              0.55
+            ]
+          ]
+        },
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "@face",
+          "alpha": 0.97
+        },
+        "panelMid": {
+          "from": "@face",
+          "alpha": 0.97
+        },
+        "panelBottom": {
+          "from": "@face",
+          "alpha": 0.97
+        },
+        "panelBorder": {
+          "from": "@face",
+          "darker": 1.9
+        },
+        "rim": "transparent",
+        "well": "#ffffff",
+        "wellBorder": "transparent",
+        "field": "#ffffff",
+        "fieldBorder": "transparent",
+        "fieldFocus": "transparent",
+        "light": {
+          "from": "@face",
+          "lighter": 1.25
+        },
+        "shade": {
+          "from": "@face",
+          "darker": 1.45
+        }
+      }
+    },
+    {
+      "id": "luna",
+      "label": "luna",
+      "glyph": "󰨡",
+      "cat": "retro",
+      "blurb": "xp blue title bar · green start",
+      "style": {
+        "dark": false,
+        "radius": 8,
+        "radiusSm": 3,
+        "surface": "block",
+        "fx": "titlebar",
+        "titleStyle": "luna",
+        "emblem": "luna",
+        "shadow": 0.4
+      },
+      "colors": {
+        "xp": {
+          "from": "#0a5ee0",
+          "mix": [
+            [
+              "color5",
+              0.1
+            ]
+          ]
+        },
+        "accent": {
+          "from": "#316ac5",
+          "mix": [
+            [
+              "color5",
+              0.1
+            ]
+          ]
+        },
+        "accent2": {
+          "from": "#3d95ff",
+          "mix": [
+            [
+              "color5",
+              0.1
+            ]
+          ]
+        },
+        "text": "#1b1b1b",
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "#ece9d8",
+          "alpha": 0.98
+        },
+        "panelMid": {
+          "from": "#ece9d8",
+          "alpha": 0.98
+        },
+        "panelBottom": {
+          "from": "#e3dfc9",
+          "alpha": 0.98
+        },
+        "panelBorder": "@xp",
+        "rim": "transparent",
+        "well": "#ffffff",
+        "wellBorder": "#7f9db9",
+        "field": "#ffffff",
+        "fieldBorder": "#7f9db9",
+        "fieldFocus": "#316ac5"
+      }
+    },
+    {
+      "id": "gameboy",
+      "label": "game boy",
+      "glyph": "󱎓",
+      "cat": "retro",
+      "blurb": "four greens on a dot-matrix lcd",
+      "style": {
+        "dark": false,
+        "radius": 4,
+        "radiusSm": 0,
+        "surface": "block",
+        "fx": "dmg",
+        "emblem": "plain",
+        "shadow": 0.35
+      },
+      "colors": {
+        "g0": "#0f380f",
+        "g1": "#306230",
+        "g2": "#8bac0f",
+        "g3": "#9bbc0f",
+        "accent": "@g0",
+        "accent2": "@g1",
+        "text": "@g0",
+        "selText": "@g3",
+        "panelTop": {
+          "from": "@g3",
+          "alpha": 0.98
+        },
+        "panelMid": {
+          "from": "@g3",
+          "alpha": 0.98
+        },
+        "panelBottom": {
+          "from": "@g2",
+          "alpha": 0.98
+        },
+        "panelBorder": "@g1",
+        "rim": {
+          "from": "@g1",
+          "alpha": 0.5
+        },
+        "well": {
+          "from": "@g2",
+          "alpha": 0.5
+        },
+        "wellBorder": "@g1",
+        "field": {
+          "from": "@g2",
+          "alpha": 0.55
+        },
+        "fieldBorder": "@g1",
+        "fieldFocus": "@g0"
+      }
+    },
+    {
+      "id": "mono",
+      "label": "mono",
+      "glyph": "󱎖",
+      "cat": "retro",
+      "blurb": "monochrome · flat · no glass",
+      "style": {
+        "radius": 10,
+        "radiusSm": 6,
+        "surface": "block",
+        "fx": "none",
+        "emblem": "plain",
+        "shadow": 0.5
+      },
+      "colors": {
+        "board": {
+          "from": "bg",
+          "darker": 1.25
+        },
+        "paper": {
+          "from": "fg",
+          "mix": [
+            [
+              "#ffffff",
+              0.35
+            ]
+          ]
+        },
+        "accent": "@paper",
+        "accent2": "fg",
+        "text": "fg",
+        "selText": "@board",
+        "panelTop": {
+          "from": "@board",
+          "alpha": 0.95
+        },
+        "panelMid": {
+          "from": "@board",
+          "alpha": 0.95
+        },
+        "panelBottom": {
+          "from": "@board",
+          "alpha": 0.96
+        },
+        "panelBorder": {
+          "from": "fg",
+          "alpha": 0.18
+        },
+        "rim": "transparent",
+        "well": "transparent",
+        "wellBorder": "transparent",
+        "field": {
+          "from": "fg",
+          "alpha": 0.05
+        },
+        "fieldBorder": {
+          "from": "fg",
+          "alpha": 0.16
+        },
+        "fieldFocus": {
+          "from": "fg",
+          "alpha": 0.5
+        }
+      }
+    },
+    {
+      "id": "wii",
+      "label": "wii",
+      "glyph": "󰖫",
+      "cat": "console",
+      "blurb": "white channels · wii-blue rings",
+      "style": {
+        "dark": false,
+        "radius": 24,
+        "radiusSm": 14,
+        "pillFull": true,
+        "surface": "wii",
+        "fx": "wii",
+        "emblem": "wii",
+        "shadow": 0.25
+      },
+      "colors": {
+        "blue": {
+          "from": "#34bfed",
+          "mix": [
+            [
+              "color5",
+              0.12
+            ]
+          ]
+        },
+        "grey": {
+          "from": "#3c3c3c",
+          "mix": [
+            [
+              "bg",
+              0.1
+            ]
+          ]
+        },
+        "accent": "@blue",
+        "accent2": {
+          "from": "#8fd6f2",
+          "mix": [
+            [
+              "color5",
+              0.1
+            ]
+          ]
+        },
+        "text": "@grey",
+        "selText": "@grey",
+        "panelTop": {
+          "from": "#ffffff",
+          "alpha": 0.94
+        },
+        "panelMid": {
+          "from": "#f3f3f3",
+          "alpha": 0.93
+        },
+        "panelBottom": {
+          "from": "#e2e2e2",
+          "alpha": 0.94
+        },
+        "panelBorder": "#c4c4c4",
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.9
+        },
+        "well": {
+          "from": "#ffffff",
+          "alpha": 0.6
+        },
+        "wellBorder": "#d2d2d2",
+        "field": "#ffffff",
+        "fieldBorder": "#c4c4c4",
+        "fieldFocus": "@blue"
+      }
+    },
+    {
+      "id": "xbox",
+      "label": "xbox 360",
+      "glyph": "󰖹",
+      "cat": "console",
+      "blurb": "green blades · ring of light",
+      "style": {
+        "radius": 10,
+        "radiusSm": 6,
+        "surface": "gloss",
+        "fx": "xbox",
+        "emblem": "orb",
+        "swoosh": true,
+        "raisedText": true
+      },
+      "colors": {
+        "green": {
+          "from": "#5dc21e",
+          "mix": [
+            [
+              "color2",
+              0.1
+            ]
+          ]
+        },
+        "accent": "@green",
+        "accent2": {
+          "from": "#107c10",
+          "mix": [
+            [
+              "color2",
+              0.1
+            ]
+          ]
+        },
+        "text": {
+          "from": "fg",
+          "mix": [
+            [
+              "#ffffff",
+              0.6
+            ]
+          ]
+        },
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "#2c2c2c",
+          "mix": [
+            [
+              "@green",
+              0.1
+            ]
+          ],
+          "alpha": 0.92
+        },
+        "panelMid": {
+          "from": "#1c1c1c",
+          "alpha": 0.93
+        },
+        "panelBottom": {
+          "from": "#0e0e0e",
+          "mix": [
+            [
+              "@green",
+              0.14
+            ]
+          ],
+          "alpha": 0.95
+        },
+        "panelBorder": {
+          "from": "@green",
+          "alpha": 0.45
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.06
+        },
+        "well": {
+          "from": "#000000",
+          "alpha": 0.32
+        },
+        "wellBorder": {
+          "from": "@green",
+          "alpha": 0.15
+        },
+        "field": {
+          "from": "#000000",
+          "alpha": 0.36
+        },
+        "fieldBorder": {
+          "from": "@green",
+          "alpha": 0.35
+        },
+        "fieldFocus": {
+          "from": "@green",
+          "alpha": 0.9
+        }
+      }
+    },
+    {
+      "id": "ps3",
+      "label": "ps3 xmb",
+      "glyph": "󰐔",
+      "cat": "console",
+      "blurb": "the crossbar wave · colour follows the rice",
+      "style": {
+        "radius": 14,
+        "radiusSm": 8,
+        "surface": "xmb",
+        "fx": "wave",
+        "emblem": "glow",
+        "glow": true
+      },
+      "colors": {
+        "base": {
+          "from": "color5",
+          "tone": {
+            "greyHue": 0.6,
+            "satMul": 1.3,
+            "satMin": 0.5,
+            "satMax": 0.85,
+            "lightMul": 0.5,
+            "lightMin": 0.16,
+            "lightMax": 0.26
+          }
+        },
+        "accent": "#ffffff",
+        "accent2": {
+          "from": "@base",
+          "lighter": 1.6
+        },
+        "text": "#ffffff",
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "@base",
+          "darker": 1.1,
+          "mix": [
+            [
+              "#ffffff",
+              0.07
+            ]
+          ],
+          "alpha": 0.9
+        },
+        "panelMid": {
+          "from": "@base",
+          "alpha": 0.91
+        },
+        "panelBottom": {
+          "from": "@base",
+          "darker": 2.4,
+          "alpha": 0.92
+        },
+        "panelBorder": {
+          "from": "#ffffff",
+          "alpha": 0.25
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.06
+        },
+        "well": {
+          "from": "#000000",
+          "alpha": 0.12
+        },
+        "wellBorder": "transparent",
+        "field": {
+          "from": "#000000",
+          "alpha": 0.18
+        },
+        "fieldBorder": {
+          "from": "#ffffff",
+          "alpha": 0.25
+        },
+        "fieldFocus": {
+          "from": "#ffffff",
+          "alpha": 0.8
+        },
+        "match": "#ffffff"
+      }
+    },
+    {
+      "id": "vapor",
+      "label": "vaporwave",
+      "glyph": "󰖜",
+      "cat": "mood",
+      "blurb": "sunset gradients over a retro grid",
+      "style": {
+        "radius": 12,
+        "radiusSm": 8,
+        "pillFull": true,
+        "surface": "gradient",
+        "fx": "grid",
+        "emblem": "sun",
+        "raisedText": true
+      },
+      "colors": {
+        "sun": {
+          "from": "color4",
+          "lean": [
+            0.93,
+            0.9,
+            1.7,
+            0.1
+          ]
+        },
+        "cyan": {
+          "from": "color5",
+          "lean": [
+            0.5,
+            0.9,
+            1.8,
+            0.06
+          ]
+        },
+        "accent": "@sun",
+        "accent2": "@cyan",
+        "text": "fg",
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "bg",
+          "mix": [
+            [
+              "@sun",
+              0.26
+            ]
+          ],
+          "alpha": 0.8
+        },
+        "panelMid": {
+          "from": "bg",
+          "mix": [
+            [
+              "@sun",
+              0.05
+            ]
+          ],
+          "alpha": 0.82
+        },
+        "panelBottom": {
+          "from": "bg",
+          "mix": [
+            [
+              "@cyan",
+              0.22
+            ]
+          ],
+          "alpha": 0.86
+        },
+        "panelBorder": {
+          "from": "@sun",
+          "alpha": 0.6
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.1
+        },
+        "well": {
+          "from": "bg",
+          "alpha": 0.42
+        },
+        "wellBorder": {
+          "from": "@cyan",
+          "alpha": 0.2
+        },
+        "field": {
+          "from": "bg",
+          "alpha": 0.55
+        },
+        "fieldBorder": {
+          "from": "@cyan",
+          "alpha": 0.35
+        },
+        "fieldFocus": {
+          "from": "@cyan",
+          "alpha": 0.85
+        }
+      }
+    },
+    {
+      "id": "sakura",
+      "label": "sakura",
+      "glyph": "󰉊",
+      "cat": "mood",
+      "blurb": "blossom pink · petals drifting down",
+      "style": {
+        "radius": 20,
+        "radiusSm": 12,
+        "pillFull": true,
+        "surface": "soft",
+        "fx": "petals",
+        "emblem": "orb",
+        "sheen": true
+      },
+      "colors": {
+        "pink": {
+          "from": "color5",
+          "lean": [
+            0.94,
+            0.92,
+            1.6,
+            0.2
+          ]
+        },
+        "base": {
+          "from": "bg",
+          "mix": [
+            [
+              "@pink",
+              0.1
+            ]
+          ]
+        },
+        "accent": "@pink",
+        "accent2": {
+          "from": "color2",
+          "lean": [
+            0.38,
+            0.5,
+            1.2,
+            0.18
+          ]
+        },
+        "text": {
+          "from": "fg",
+          "mix": [
+            [
+              "@pink",
+              0.18
+            ]
+          ]
+        },
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "@base",
+          "mix": [
+            [
+              "@pink",
+              0.26
+            ]
+          ],
+          "alpha": 0.8
+        },
+        "panelMid": {
+          "from": "@base",
+          "alpha": 0.82
+        },
+        "panelBottom": {
+          "from": "@base",
+          "mix": [
+            [
+              "@pink",
+              0.08
+            ]
+          ],
+          "alpha": 0.86
+        },
+        "panelBorder": {
+          "from": "@pink",
+          "alpha": 0.5
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.1
+        },
+        "well": {
+          "from": "bg",
+          "alpha": 0.38
+        },
+        "wellBorder": {
+          "from": "@pink",
+          "alpha": 0.15
+        },
+        "field": {
+          "from": "bg",
+          "alpha": 0.5
+        },
+        "fieldBorder": {
+          "from": "@pink",
+          "alpha": 0.3
+        },
+        "fieldFocus": {
+          "from": "@pink",
+          "alpha": 0.8
+        }
+      }
+    },
+    {
+      "id": "aurora",
+      "label": "aurora",
+      "glyph": "󱝁",
+      "cat": "mood",
+      "blurb": "night sky · stars · northern lights",
+      "style": {
+        "radius": 16,
+        "radiusSm": 10,
+        "surface": "gradient",
+        "fx": "aurora",
+        "emblem": "glow",
+        "glow": true,
+        "raisedText": true
+      },
+      "colors": {
+        "green": {
+          "from": "color2",
+          "lean": [
+            0.4,
+            0.92,
+            1.7,
+            0.16
+          ]
+        },
+        "violet": {
+          "from": "color5",
+          "lean": [
+            0.78,
+            0.92,
+            1.4,
+            0.14
+          ]
+        },
+        "night": {
+          "from": "bg",
+          "darker": 1.4,
+          "mix": [
+            [
+              "#06102a",
+              0.45
+            ]
+          ]
+        },
+        "accent": "@green",
+        "accent2": "@violet",
+        "text": "fg",
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "@night",
+          "alpha": 0.86
+        },
+        "panelMid": {
+          "from": "@night",
+          "alpha": 0.88
+        },
+        "panelBottom": {
+          "from": "@night",
+          "mix": [
+            [
+              "@green",
+              0.08
+            ]
+          ],
+          "alpha": 0.9
+        },
+        "panelBorder": {
+          "from": "@green",
+          "alpha": 0.35
+        },
+        "rim": {
+          "from": "#ffffff",
+          "alpha": 0.06
+        },
+        "well": {
+          "from": "#000000",
+          "alpha": 0.2
+        },
+        "wellBorder": {
+          "from": "@green",
+          "alpha": 0.12
+        },
+        "field": {
+          "from": "#000000",
+          "alpha": 0.25
+        },
+        "fieldBorder": {
+          "from": "@green",
+          "alpha": 0.3
+        },
+        "fieldFocus": {
+          "from": "@green",
+          "alpha": 0.8
+        }
+      }
+    },
+    {
+      "id": "steins",
+      "label": "steins;gate",
+      "glyph": "󱑎",
+      "cat": "mood",
+      "blurb": "nixie amber · divergence 1.048596",
+      "style": {
+        "radius": 6,
+        "radiusSm": 4,
+        "surface": "nixie",
+        "fx": "divergence",
+        "emblem": "nixie",
+        "glow": true
+      },
+      "colors": {
+        "amber": {
+          "from": "#ff9a1f",
+          "mix": [
+            [
+              "color3",
+              0.12
+            ]
+          ]
+        },
+        "brass": {
+          "from": "#0e0805",
+          "mix": [
+            [
+              "bg",
+              0.2
+            ]
+          ]
+        },
+        "accent": "@amber",
+        "accent2": {
+          "from": "#c2410c",
+          "mix": [
+            [
+              "color4",
+              0.2
+            ]
+          ]
+        },
+        "text": {
+          "from": "#f2d6ae",
+          "mix": [
+            [
+              "fg",
+              0.2
+            ]
+          ]
+        },
+        "selText": {
+          "from": "@amber",
+          "lighter": 1.25
+        },
+        "panelTop": {
+          "from": "@brass",
+          "mix": [
+            [
+              "@amber",
+              0.08
+            ]
+          ],
+          "alpha": 0.94
+        },
+        "panelMid": {
+          "from": "@brass",
+          "alpha": 0.95
+        },
+        "panelBottom": {
+          "from": "@brass",
+          "mix": [
+            [
+              "#3a1d0a",
+              0.4
+            ]
+          ],
+          "alpha": 0.96
+        },
+        "panelBorder": {
+          "from": "@amber",
+          "alpha": 0.4
+        },
+        "rim": {
+          "from": "@amber",
+          "alpha": 0.1
+        },
+        "well": {
+          "from": "#000000",
+          "alpha": 0.3
+        },
+        "wellBorder": {
+          "from": "@amber",
+          "alpha": 0.15
+        },
+        "field": {
+          "from": "#000000",
+          "alpha": 0.35
+        },
+        "fieldBorder": {
+          "from": "@amber",
+          "alpha": 0.3
+        },
+        "fieldFocus": {
+          "from": "@amber",
+          "alpha": 0.85
+        }
+      }
+    },
+    {
+      "id": "persona",
+      "label": "persona 5",
+      "glyph": "󱀣",
+      "cat": "mood",
+      "blurb": "red · black · tilted calling cards",
+      "style": {
+        "radius": 2,
+        "radiusSm": 0,
+        "surface": "p5",
+        "fx": "p5",
+        "emblem": "p5",
+        "shadow": 0.6
+      },
+      "colors": {
+        "red": {
+          "from": "#e60012",
+          "mix": [
+            [
+              "color1",
+              0.08
+            ]
+          ]
+        },
+        "accent": "@red",
+        "accent2": "#ffffff",
+        "text": "#ffffff",
+        "selText": "#ffffff",
+        "panelTop": {
+          "from": "#0b0b0b",
+          "alpha": 0.95
+        },
+        "panelMid": {
+          "from": "#0b0b0b",
+          "alpha": 0.95
+        },
+        "panelBottom": {
+          "from": "#0b0b0b",
+          "mix": [
+            [
+              "@red",
+              0.2
+            ]
+          ],
+          "alpha": 0.96
+        },
+        "panelBorder": "@red",
+        "rim": "transparent",
+        "well": {
+          "from": "#000000",
+          "alpha": 0.3
+        },
+        "wellBorder": {
+          "from": "@red",
+          "alpha": 0.3
+        },
+        "field": {
+          "from": "#ffffff",
+          "alpha": 0.08
+        },
+        "fieldBorder": {
+          "from": "@red",
+          "alpha": 0.55
+        },
+        "fieldFocus": "@red"
+      }
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+@import url("file:///home/kino/.cache/wal/colors-waybar.css");
+
+/* ═══════════════════════════════════════════════════════════════
+   وصفة الـ Glow (طبقات الظل) — القاعدة الذهبية:
+
+   1) طبقة نواة ضيقة  (1–3px)  → تحافظ على وضوح الحروف
+   2) طبقة جسم متوسطة (8–14px) → تعطي إحساس النيون
+   3) طبقة اتساع واسعة (20–40px, شفافية أقل) → هالة حول العنصر
+   4) ظل أسود سفلي   (1px)     → يرفع التباين فوق الخلفية الشفافة
+
+   ❌ تجنب blur أكثر من 40px على النص الصغير — يعطي ضباب مو نظيف
+   ═══════════════════════════════════════════════════════════════ */
+
+* {
+    font-family: "Pixel Code", "BestTen-CRT", FontAwesome, Roboto, Helvetica, Arial, otf-font-awesome, sans-serif;
+    font-size: 18px;
+    min-height: 0;
+    font-weight: 600;
+
+    text-shadow:
+        0 0 2px  rgba(231, 230, 237, 0.40),
+        0 0 9px  alpha(@color5, 0.50),
+        0 0 20px alpha(@color5, 0.28),
+        0 1px 2px rgba(0, 0, 0, 0.92);
+}
+
+window#waybar {
+    background: alpha(@color0, 0.67);
+    border-radius: 11px;
+    color: #E7E6ED;
+
+    border: 2px solid alpha(@color3, 0.50);
+
+    box-shadow:
+        /* هالة داخلية ناعمة */
+        inset 0 0 14px alpha(@color5, 0.10),
+        /* توهج النيون: قريب + متوسط + بعيد */
+        0 0 6px  alpha(@color5, 0.40),
+        0 0 16px alpha(@color5, 0.22),
+        0 0 34px alpha(@color5, 0.12),
+        /* ظل التوقيع الأسود يعطي ارتفاع عن الخلفية */
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+/* -------- Left: Arch logo -------- */
+#custom-arch {
+    color: #E7E6ED;
+    font-size: 21px;
+    padding: 0 10px 0 14px;
+
+    text-shadow:
+        0 0 3px  rgba(231, 230, 237, 0.90),
+        0 0 10px alpha(@color5, 0.80),
+        0 0 22px alpha(@color5, 0.50),
+        0 0 42px alpha(@color5, 0.25),
+        0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+#custom-arch:hover {
+    color: #FFFFFF;
+
+    text-shadow:
+        0 0 3px  rgba(255, 255, 255, 0.95),
+        0 0 9px  alpha(@color5, 0.95),
+        0 0 18px alpha(@color5, 0.70),
+        0 0 36px alpha(@color5, 0.40),
+        0 0 55px alpha(@color5, 0.20),
+        0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+/* -------- Separators -------- */
+#custom-sep-l,
+#custom-sep-r1,
+#custom-sep-r2 {
+    color: #a3a3a3;
+    padding: 0 6px;
+    font-size: 12px;
+
+    text-shadow:
+        0 0 3px rgba(163, 163, 163, 0.50),
+        0 0 8px rgba(163, 163, 163, 0.25),
+        0 1px 2px rgba(0, 0, 0, 0.90);
+}
+
+/* -------- Left: Workspaces, CJK numeral style -------- */
+#workspaces {
+    background: transparent;
+    padding: 3px 6px;
+}
+
+#workspaces button {
+    color: rgba(216, 216, 216, 0.35);
+    padding: 0 6px;
+    font-size: 15px;
+
+    transition: all 0.2s ease-in-out;
+
+    text-shadow:
+        0 0 2px rgba(216, 216, 216, 0.30),
+        0 0 7px rgba(216, 216, 216, 0.16),
+        0 1px 2px rgba(0, 0, 0, 0.92);
+}
+
+#workspaces button.active {
+    color: @color5;
+
+    text-shadow:
+        0 0 2px  alpha(@color5, 1),
+        0 0 8px  alpha(@color5, 0.90),
+        0 0 16px alpha(@color5, 0.60),
+        0 0 30px alpha(@color5, 0.35),
+        0 0 48px alpha(@color5, 0.18),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+#workspaces button.urgent {
+    color: #e64553;
+
+    text-shadow:
+        0 0 2px  rgba(230, 69, 83, 1),
+        0 0 8px  rgba(230, 69, 83, 0.85),
+        0 0 16px rgba(230, 69, 83, 0.55),
+        0 0 32px rgba(230, 69, 83, 0.30),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+#workspaces button:hover {
+    color: @color5;
+
+    text-shadow:
+        0 0 2px  alpha(@color5, 0.95),
+        0 0 8px  alpha(@color5, 0.75),
+        0 0 17px alpha(@color5, 0.50),
+        0 0 32px alpha(@color5, 0.28),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+/* ── Focused window title ────────────────────────────────────── */
+#window {
+    color: rgba(231, 230, 237, 0.88);
+    font-style: italic;
+    padding: 0 18px;
+
+    background: alpha(@color0, 0.35);
+    border-radius: 11px;
+
+    text-shadow:
+        0 0 2px  alpha(@color5, 0.70),
+        0 0 9px  alpha(@color5, 0.45),
+        0 0 20px alpha(@color5, 0.22),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.18),
+        0 0 14px alpha(@color5, 0.10),
+        inset 0 0 9px alpha(@color5, 0.08);
+}
+
+window#waybar.empty #window {
+    background: transparent;
+    color: rgba(231, 230, 237, 0.35);
+
+    text-shadow:
+        0 0 4px rgba(231, 230, 237, 0.15);
+
+    box-shadow: none;
+}
+
+#clock {
+    color: #D8D8D8;
+    font-weight: 600;
+    padding: 0 17px 0 8px;
+
+    text-shadow:
+        0 0 2px  rgba(216, 216, 216, 0.85),
+        0 0 9px  rgba(216, 216, 216, 0.50),
+        0 0 18px rgba(216, 216, 216, 0.28),
+        0 0 32px alpha(@color5, 0.18),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+/* -------- New right-side modules -------- */
+#language,
+#tray {
+    color: #d8d8d8;
+    padding: 0 6px;
+    font-size: 17px;
+
+    text-shadow:
+        0 0 2px rgba(216, 216, 216, 0.70),
+        0 0 9px rgba(216, 216, 216, 0.40),
+        0 0 18px rgba(216, 216, 216, 0.20),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+#language:hover {
+    color: #FFFFFF;
+
+    text-shadow:
+        0 0 2px  rgba(255, 255, 255, 0.90),
+        0 0 9px  alpha(@color5, 0.80),
+        0 0 18px alpha(@color5, 0.55),
+        0 0 34px alpha(@color5, 0.30),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+/* -------- Volume -------- */
+#pulseaudio {
+    color: #d8d8d8;
+    padding: 0 8px;
+    font-size: 17px;
+
+    text-shadow:
+        0 0 2px rgba(216, 216, 216, 0.70),
+        0 0 9px rgba(216, 216, 216, 0.40),
+        0 0 18px rgba(216, 216, 216, 0.20),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+#pulseaudio:hover {
+    color: #FFFFFF;
+
+    text-shadow:
+        0 0 2px  rgba(255, 255, 255, 0.90),
+        0 0 9px  alpha(@color5, 0.80),
+        0 0 18px alpha(@color5, 0.55),
+        0 0 34px alpha(@color5, 0.30),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+#pulseaudio.muted {
+    color: rgba(216, 216, 216, 0.45);
+
+    text-shadow:
+        0 0 3px rgba(216, 216, 216, 0.20),
+        0 1px 2px rgba(0, 0, 0, 0.90);
+}
+
+/* -------- Do Not Disturb -------- */
+#custom-dnd {
+    color: #d8d8d8;
+    padding: 0 8px;
+    font-size: 15px;
+
+    text-shadow:
+        0 0 2px rgba(216, 216, 216, 0.70),
+        0 0 9px rgba(216, 216, 216, 0.40),
+        0 0 18px rgba(216, 216, 216, 0.20),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+#custom-dnd:hover {
+    color: @color5;
+
+    text-shadow:
+        0 0 2px  alpha(@color5, 0.95),
+        0 0 9px  alpha(@color5, 0.80),
+        0 0 19px alpha(@color5, 0.55),
+        0 0 36px alpha(@color5, 0.30),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+#custom-dnd.active {
+    color: #e64553;
+
+    text-shadow:
+        0 0 2px  rgba(230, 69, 83, 0.95),
+        0 0 9px  rgba(230, 69, 83, 0.70),
+        0 0 20px rgba(230, 69, 83, 0.40),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+#custom-battery {
+    padding: 0 10px;
+    color: #a6e3a1;
+
+}

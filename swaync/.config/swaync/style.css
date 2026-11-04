@@ -1,0 +1,703 @@
+@import url("file:///home/kino/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "Pixel Code", "PixelCode", "BestTen-CRT", monospace;
+    font-size: 15px;
+    font-weight: 600;
+    color: #E7E6ED;
+
+    text-shadow:
+        0 0 2px  rgba(231, 230, 237, 0.40),
+        0 0 9px  alpha(@color5, 0.50),
+        0 0 20px alpha(@color5, 0.28),
+        0 1px 2px rgba(0, 0, 0, 0.92);
+}
+
+/* ============================================================ */
+/* ======================== NOTIFICATIONS ===================== */
+/* ============================================================ */
+
+/* margin يعطي مساحة للتوهج الخارجي عشان ما ينقص */
+.notification-row {
+    outline: none;
+    margin: 12px 16px;
+    padding: 0;
+    background: transparent;
+    border-radius: 23px;
+    transition: all 200ms ease-in-out;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+    background: transparent;
+}
+
+.notification {
+    background: alpha(@color0, 0.82);
+    border: 2px solid alpha(@color3, 0.50);
+    border-radius: 23px;
+    padding: 6px;
+    margin: 0;
+
+    box-shadow:
+        inset 0 0 14px alpha(@color5, 0.10),
+        0 0 6px  alpha(@color5, 0.40),
+        0 0 16px alpha(@color5, 0.22),
+        0 0 34px alpha(@color5, 0.12),
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.notification-row:hover .notification {
+    border-color: alpha(@color5, 0.80);
+
+    box-shadow:
+        inset 0 0 14px alpha(@color5, 0.14),
+        0 0 8px  alpha(@color5, 0.55),
+        0 0 20px alpha(@color5, 0.30),
+        0 0 40px alpha(@color5, 0.16),
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.notification.critical {
+    border-color: rgba(230, 69, 83, 0.70);
+
+    box-shadow:
+        0 0 6px  rgba(230, 69, 83, 0.50),
+        0 0 16px rgba(230, 69, 83, 0.30),
+        0 0 34px rgba(230, 69, 83, 0.16),
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.notification-content {
+    background: transparent;
+    padding: 6px;
+}
+
+.notification-default-action,
+.notification-action {
+    background: transparent;
+    border-radius: 18px;
+}
+
+.notification-content .summary {
+    color: @color5;
+    font-size: 16px;
+
+    text-shadow:
+        0 0 2px  alpha(@color5, 1),
+        0 0 8px  alpha(@color5, 0.90),
+        0 0 16px alpha(@color5, 0.60),
+        0 0 30px alpha(@color5, 0.35),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+.notification-content .body {
+    color: rgba(231, 230, 237, 0.88);
+}
+
+.notification-content .time {
+    color: rgba(216, 216, 216, 0.50);
+    font-size: 13px;
+}
+
+.notification .image {
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+/* زر الإغلاق */
+.close-button {
+    background: alpha(@color0, 0.60);
+    color: #d8d8d8;
+    border: 1px solid alpha(@color3, 0.35);
+    border-radius: 999px;
+    margin: 6px;
+    padding: 0 4px;
+    min-width: 22px;
+    min-height: 22px;
+    box-shadow: none;
+}
+
+.close-button:hover {
+    background: alpha(@color0, 0.85);
+    color: #e64553;
+    border-color: rgba(230, 69, 83, 0.70);
+
+    text-shadow:
+        0 0 2px rgba(230, 69, 83, 0.95),
+        0 0 9px rgba(230, 69, 83, 0.70),
+        0 0 20px rgba(230, 69, 83, 0.40);
+}
+
+/* أزرار الإجراءات داخل الإشعار */
+.notification-action > button,
+.notification button {
+    background: alpha(@color0, 0.35);
+    border: 1px solid alpha(@color3, 0.35);
+    border-radius: 11px;
+    padding: 4px 12px;
+    margin: 4px;
+    box-shadow: none;
+}
+
+.notification-action > button:hover,
+.notification button:hover {
+    background: alpha(@color0, 0.55);
+    border-color: alpha(@color5, 0.70);
+    color: @color5;
+
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.25),
+        0 0 14px alpha(@color5, 0.12),
+        inset 0 0 9px alpha(@color5, 0.08);
+}
+
+/* ============================================================ */
+/* ======================= CONTROL CENTER ===================== */
+/* ============================================================ */
+
+.control-center {
+    background: alpha(@color0, 0.82);
+    border: 2px solid alpha(@color3, 0.50);
+    border-radius: 23px;
+    margin: 30px;
+    padding: 10px;
+
+    box-shadow:
+        inset 0 0 14px alpha(@color5, 0.10),
+        0 0 6px  alpha(@color5, 0.40),
+        0 0 16px alpha(@color5, 0.22),
+        0 0 34px alpha(@color5, 0.12),
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.control-center .notification-row .notification {
+    background: alpha(@color0, 0.45);
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.18),
+        0 0 14px alpha(@color5, 0.10),
+        inset 0 0 9px alpha(@color5, 0.08);
+}
+
+.control-center .notification-row {
+    margin: 6px 4px;
+}
+
+.widget-title {
+    margin: 8px 10px;
+    font-size: 17px;
+    color: @color5;
+
+    text-shadow:
+        0 0 2px  alpha(@color5, 1),
+        0 0 8px  alpha(@color5, 0.90),
+        0 0 16px alpha(@color5, 0.60),
+        0 0 30px alpha(@color5, 0.35),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+.widget-title > button {
+    background: alpha(@color0, 0.35);
+    border: 1px solid alpha(@color3, 0.35);
+    border-radius: 11px;
+    padding: 4px 14px;
+    box-shadow: none;
+}
+
+.widget-title > button:hover {
+    background: alpha(@color0, 0.55);
+    border-color: alpha(@color5, 0.70);
+    color: @color5;
+
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.25),
+        0 0 14px alpha(@color5, 0.12);
+}
+
+.widget-label {
+    margin: 8px 10px;
+}
+
+.widget-label > label {
+    color: rgba(231, 230, 237, 0.88);
+}
+
+/* ---------- Do Not Disturb ---------- */
+.widget-dnd {
+    margin: 8px 10px;
+    font-size: 15px;
+}
+
+.widget-dnd > switch {
+    background: alpha(@color0, 0.60);
+    border: 1px solid alpha(@color3, 0.35);
+    border-radius: 999px;
+}
+
+.widget-dnd > switch:checked {
+    background: alpha(@color5, 0.45);
+    border-color: alpha(@color5, 0.80);
+
+    box-shadow:
+        0 0 6px  alpha(@color5, 0.40),
+        0 0 14px alpha(@color5, 0.20);
+}
+
+.widget-dnd > switch slider {
+    background: #E7E6ED;
+    border-radius: 999px;
+}
+
+/* ---------- Buttons grid ---------- */
+.widget-buttons-grid {
+    background: alpha(@color0, 0.35);
+    border-radius: 15px;
+    padding: 4px;
+    mar@import url("file:///home/kino/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "Pixel Code", "PixelCode", "BestTen-CRT", monospace;
+    font-size: 15px;
+    font-weight: 600;
+    color: #E7E6ED;
+
+    text-shadow:
+        0 0 2px  rgba(231, 230, 237, 0.40),
+        0 0 9px  alpha(@color5, 0.50),
+        0 0 20px alpha(@color5, 0.28),
+        0 1px 2px rgba(0, 0, 0, 0.92);
+}
+
+/* ============================================================ */
+/* ======================== NOTIFICATIONS ===================== */
+/* ============================================================ */
+
+/* margin يعطي مساحة للتوهج الخارجي عشان ما ينقص */
+.notification-row {
+    outline: none;
+    margin: 12px 16px;
+    padding: 0;
+    background: transparent;
+    border-radius: 23px;
+    transition: all 200ms ease-in-out;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+    background: transparent;
+}
+
+.notification {
+    background: alpha(@color0, 0.82);
+    border: 2px solid alpha(@color3, 0.50);
+    border-radius: 23px;
+    padding: 6px;
+    margin: 0;
+
+    box-shadow:
+        inset 0 0 14px alpha(@color5, 0.10),
+        0 0 6px  alpha(@color5, 0.40),
+        0 0 16px alpha(@color5, 0.22),
+        0 0 34px alpha(@color5, 0.12),
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.notification-row:hover .notification {
+    border-color: alpha(@color5, 0.80);
+
+    box-shadow:
+        inset 0 0 14px alpha(@color5, 0.14),
+        0 0 8px  alpha(@color5, 0.55),
+        0 0 20px alpha(@color5, 0.30),
+        0 0 40px alpha(@color5, 0.16),
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.notification.critical {
+    border-color: rgba(230, 69, 83, 0.70);
+
+    box-shadow:
+        0 0 6px  rgba(230, 69, 83, 0.50),
+        0 0 16px rgba(230, 69, 83, 0.30),
+        0 0 34px rgba(230, 69, 83, 0.16),
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.notification-content {
+    background: transparent;
+    padding: 6px;
+}
+
+.notification-default-action,
+.notification-action {
+    background: transparent;
+    border-radius: 18px;
+}
+
+.notification-content .summary {
+    color: @color5;
+    font-size: 16px;
+
+    text-shadow:
+        0 0 2px  alpha(@color5, 1),
+        0 0 8px  alpha(@color5, 0.90),
+        0 0 16px alpha(@color5, 0.60),
+        0 0 30px alpha(@color5, 0.35),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+.notification-content .body {
+    color: rgba(231, 230, 237, 0.88);
+}
+
+.notification-content .time {
+    color: rgba(216, 216, 216, 0.50);
+    font-size: 13px;
+}
+
+.notification .image {
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+/* زر الإغلاق */
+.close-button {
+    background: alpha(@color0, 0.60);
+    color: #d8d8d8;
+    border: 1px solid alpha(@color3, 0.35);
+    border-radius: 999px;
+    margin: 6px;
+    padding: 0 4px;
+    min-width: 22px;
+    min-height: 22px;
+    box-shadow: none;
+}
+
+.close-button:hover {
+    background: alpha(@color0, 0.85);
+    color: #e64553;
+    border-color: rgba(230, 69, 83, 0.70);
+
+    text-shadow:
+        0 0 2px rgba(230, 69, 83, 0.95),
+        0 0 9px rgba(230, 69, 83, 0.70),
+        0 0 20px rgba(230, 69, 83, 0.40);
+}
+
+/* أزرار الإجراءات داخل الإشعار */
+.notification-action > button,
+.notification button {
+    background: alpha(@color0, 0.35);
+    border: 1px solid alpha(@color3, 0.35);
+    border-radius: 11px;
+    padding: 4px 12px;
+    margin: 4px;
+    box-shadow: none;
+}
+
+.notification-action > button:hover,
+.notification button:hover {
+    background: alpha(@color0, 0.55);
+    border-color: alpha(@color5, 0.70);
+    color: @color5;
+
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.25),
+        0 0 14px alpha(@color5, 0.12),
+        inset 0 0 9px alpha(@color5, 0.08);
+}
+
+/* ============================================================ */
+/* ======================= CONTROL CENTER ===================== */
+/* ============================================================ */
+
+.control-center {
+    background: alpha(@color0, 0.82);
+    border: 2px solid alpha(@color3, 0.50);
+    border-radius: 23px;
+    margin: 30px;
+    padding: 10px;
+
+    box-shadow:
+        inset 0 0 14px alpha(@color5, 0.10),
+        0 0 6px  alpha(@color5, 0.40),
+        0 0 16px alpha(@color5, 0.22),
+        0 0 34px alpha(@color5, 0.12),
+        0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.control-center .notification-row .notification {
+    background: alpha(@color0, 0.45);
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.18),
+        0 0 14px alpha(@color5, 0.10),
+        inset 0 0 9px alpha(@color5, 0.08);
+}
+
+.control-center .notification-row {
+    margin: 6px 4px;
+}
+
+.widget-title {
+    margin: 8px 10px;
+    font-size: 17px;
+    color: @color5;
+
+    text-shadow:
+        0 0 2px  alpha(@color5, 1),
+        0 0 8px  alpha(@color5, 0.90),
+        0 0 16px alpha(@color5, 0.60),
+        0 0 30px alpha(@color5, 0.35),
+        0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+.widget-title > button {
+    background: alpha(@color0, 0.35);
+    border: 1px solid alpha(@color3, 0.35);
+    border-radius: 11px;
+    padding: 4px 14px;
+    box-shadow: none;
+}
+
+.widget-title > button:hover {
+    background: alpha(@color0, 0.55);
+    border-color: alpha(@color5, 0.70);
+    color: @color5;
+
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.25),
+        0 0 14px alpha(@color5, 0.12);
+}
+
+.widget-label {
+    margin: 8px 10px;
+}
+
+.widget-label > label {
+    color: rgba(231, 230, 237, 0.88);
+}
+
+/* ---------- Do Not Disturb ---------- */
+.widget-dnd {
+    margin: 8px 10px;
+    font-size: 15px;
+}
+
+.widget-dnd > switch {
+    background: alpha(@color0, 0.60);
+    border: 1px solid alpha(@color3, 0.35);
+    border-radius: 999px;
+}
+
+.widget-dnd > switch:checked {
+    background: alpha(@color5, 0.45);
+    border-color: alpha(@color5, 0.80);
+
+    box-shadow:
+        0 0 6px  alpha(@color5, 0.40),
+        0 0 14px alpha(@color5, 0.20);
+}
+
+.widget-dnd > switch slider {
+    background: #E7E6ED;
+    border-radius: 999px;
+}
+
+/* ---------- Buttons grid ---------- */
+.widget-buttons-grid {
+    background: alpha(@color0, 0.35);
+    border-radius: 15px;
+    padding: 4px;
+    margin: 8px 10px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: alpha(@color0, 0.35);
+    border: 1px solid alpha(@color3, 0.25);
+    border-radius: 11px;
+    margin: 4px;
+    padding: 6px 20px;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: alpha(@color0, 0.55);
+    border-color: alpha(@color5, 0.60);
+    color: @color5;
+
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.25),
+        0 0 14px alpha(@color5, 0.12),
+        inset 0 0 9px alpha(@color5, 0.08);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+    background: alpha(@color5, 0.12);
+    border-color: alpha(@color5, 0.85);
+    color: @color5;
+
+    box-shadow:
+        0 0 6px  alpha(@color5, 0.50),
+        0 0 16px alpha(@color5, 0.28),
+        0 0 34px alpha(@color5, 0.14),
+        inset 0 0 12px alpha(@color5, 0.14);
+}
+
+/* ---------- Sliders (volume / backlight) ---------- */
+.widget-volume,
+.widget-backlight {
+    background: alpha(@color0, 0.35);
+    border-radius: 15px;
+    padding: 6px 10px;
+    margin: 8px 10px;
+}
+
+.widget-volume scale trough,
+.widget-backlight scale trough {
+    background: rgba(255, 255, 255, 0.075);
+    min-height: 8px;
+    border-radius: 999px;
+}
+
+.widget-volume scale highlight,
+.widget-backlight scale highlight,
+.widget-volume scale progress,
+.widget-backlight scale progress {
+    background: @color5;
+    border-radius: 999px;
+
+    box-shadow:
+        0 0 6px  alpha(@color5, 0.70),
+        0 0 14px alpha(@color5, 0.40);
+}
+
+.widget-volume scale slider,
+.widget-backlight scale slider {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    min-height: 0;
+    min-width: 0;
+}
+
+/* ---------- MPRIS ---------- */
+.widget-mpris {
+    background: alpha(@color0, 0.35);
+    border-radius: 15px;
+    padding: 6px;
+    margin: 8px 10px;
+}
+
+.widget-mpris button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.widget-mpris button:hover {
+    color: @color5;
+}
+
+/* ---------- Scrollbar ---------- */
+scrollbar slider {
+    background: alpha(@color5, 0.35);
+    border-radius: 999px;
+    min-width: 4px;
+}gin: 8px 10px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: alpha(@color0, 0.35);
+    border: 1px solid alpha(@color3, 0.25);
+    border-radius: 11px;
+    margin: 4px;
+    padding: 6px 20px;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: alpha(@color0, 0.55);
+    border-color: alpha(@color5, 0.60);
+    color: @color5;
+
+    box-shadow:
+        0 0 5px  alpha(@color5, 0.25),
+        0 0 14px alpha(@color5, 0.12),
+        inset 0 0 9px alpha(@color5, 0.08);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+    background: alpha(@color5, 0.12);
+    border-color: alpha(@color5, 0.85);
+    color: @color5;
+
+    box-shadow:
+        0 0 6px  alpha(@color5, 0.50),
+        0 0 16px alpha(@color5, 0.28),
+        0 0 34px alpha(@color5, 0.14),
+        inset 0 0 12px alpha(@color5, 0.14);
+}
+
+/* ---------- Sliders (volume / backlight) ---------- */
+.widget-volume,
+.widget-backlight {
+    background: alpha(@color0, 0.35);
+    border-radius: 15px;
+    padding: 6px 10px;
+    margin: 8px 10px;
+}
+
+.widget-volume scale trough,
+.widget-backlight scale trough {
+    background: rgba(255, 255, 255, 0.075);
+    min-height: 8px;
+    border-radius: 999px;
+}
+
+.widget-volume scale highlight,
+.widget-backlight scale highlight,
+.widget-volume scale progress,
+.widget-backlight scale progress {
+    background: @color5;
+    border-radius: 999px;
+
+    box-shadow:
+        0 0 6px  alpha(@color5, 0.70),
+        0 0 14px alpha(@color5, 0.40);
+}
+
+.widget-volume scale slider,
+.widget-backlight scale slider {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    min-height: 0;
+    min-width: 0;
+}
+
+/* ---------- MPRIS ---------- */
+.widget-mpris {
+    background: alpha(@color0, 0.35);
+    border-radius: 15px;
+    padding: 6px;
+    margin: 8px 10px;
+}
+
+.widget-mpris button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.widget-mpris button:hover {
+    color: @color5;
+}
+
+/* ---------- Scrollbar ---------- */
+scrollbar slider {
+    background: alpha(@color5, 0.35);
+    border-radius: 999px;
+    min-width: 4px;
+}

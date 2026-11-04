@@ -1,0 +1,5 @@
+fish/.config/fish/fish_variables
+hypr/*.bak*
+hypr/*~
+swaync/.config/swaync/*.bak
+quickshell/HyprQuickFrame/
